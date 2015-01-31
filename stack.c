@@ -15,3 +15,7 @@ int push(Stack stack, void* data){
 	int yes = add_to_list(stack.list,newNode);
 	return (yes)?stack.list->count:-1;
 };
+
+void * pop(Stack stack){
+	return deleteElementAt(stack.list,stack.list->count-1);
+};

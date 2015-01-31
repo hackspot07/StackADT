@@ -78,3 +78,15 @@ void test_stack_gives_data_c_at_top_and_count_5(){
 	assertEqual(index,'c');
 	assertEqual(*(char*)(*stack.top)->data,data[4]);
 };
+
+void test_pop_gives_reference_of_16_after_pop(){
+	Stack stack = createStack();
+	int data[] = {12,13,15,16},count,index,i;
+	Node_ptr result;
+	for(i=0;i<4;i++){
+		count = push(stack,&data[i]);
+	}
+	result = pop(stack);
+	assertEqual(*(int*)result,16);
+	assertEqual(*(int*)(*stack.top)->data,data[2]);
+};

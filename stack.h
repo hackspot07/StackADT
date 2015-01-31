@@ -9,3 +9,4 @@ struct stack{
 
 Stack createStack(void);
 int push(Stack stack, void* data);
+void * pop(Stack stack);
